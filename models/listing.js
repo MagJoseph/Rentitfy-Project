@@ -1,3 +1,4 @@
+
 const { Schema } = require('mongoose')
 
 const Listing = new Schema(
@@ -12,4 +13,4 @@ const Listing = new Schema(
     { timestamps: true }
 )
 
-module.exports = Listing
+module.exports = ('listings', Listing)

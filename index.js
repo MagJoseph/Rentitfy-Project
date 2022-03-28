@@ -22,8 +22,9 @@ const listingsController = require('./controllers/ListingsController')
 app.get('/listings', listingsController.getListings)
 
 
-//const ratingsController = require('./controllers/RatingsController')
+const reviewsController = require('./controllers/ReviewsController')
 
+app.get('/reviews', reviewsController.getReviews)
 
 
 
