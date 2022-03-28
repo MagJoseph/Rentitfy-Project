@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
   res.send('This is root!')
 })
 
+const listingsController = require('./controllers/ListingsController')
+const ratingsController = require('./controllers/RatingsController')
+
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
+
+
+//npm run dev
