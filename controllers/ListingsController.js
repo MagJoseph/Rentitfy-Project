@@ -1,7 +1,6 @@
-const getListings = (req, res) => {
-    res.send({
-        msg: 'Getting Listings'
-    })
+const getListings = async (req, res) => {
+   const listings = await Listing.find({})
+   res.json(listings)
 }
 
 
