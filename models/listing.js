@@ -6,7 +6,7 @@ const Listing = new Schema(
         neighborhood: { type: String, required: true },
         bedrooms: { type: Number, required: true },
         price: { type: Number, required: true },
-        url: { type: String, required: true },
+        img: { type: String, required: true },
         reviews_id: { type: Schema.Types.ObjectId, ref: 'reviews_id' }
     },
     { timestamps: true }
