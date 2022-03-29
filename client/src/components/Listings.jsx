@@ -1,8 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Listings = () => {
   return (
-    <div>Listings</div>
+    <div>Listings
+    <Link to='/'>Home</Link>
+    
+    </div>
   )
 }
 

@@ -21,8 +21,8 @@ const postListing = async (req, res) => {
 
 const getListingById = async (req, res) => {
     try {
-        const { id } = req.params
-        const listing = await Listing.findById(id)
+        const listId = req.params.id
+        const listing = await Listing.findById(listId)
         if (listing) {
             return res.status(200).json({ listing })
         } return res.status(404).send('Listing not found')

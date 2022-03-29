@@ -8,7 +8,7 @@ const Listing = new Schema(
         bedrooms: { type: Number, required: true },
         price: { type: Number, required: true },
         img: { type: String, required: true },
-        reviews_id: { type: Schema.Types.ObjectId, ref: 'reviews_id' }
+        reviews_id: [{ type: Schema.Types.ObjectId, ref: 'reviews_id' }]
     },
     { timestamps: true }
 )
