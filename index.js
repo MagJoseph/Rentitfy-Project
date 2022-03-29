@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
 const listingsController = require('./controllers/ListingsController')
 
 app.get('/listings', listingsController.getListings)
+app.get('.listings/:id', listingsController.getListingById)
+app.put('.listings/:id', listingsController.updateListing)
+app.delete('./listings/id', listingsController.deleteListing)
 
 
 const reviewsController = require('./controllers/ReviewsController')
