@@ -2,10 +2,41 @@
   text-align: center;
 }
 
+body {
+  background-color: rgb(40, 248, 245);
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1em;
   min-height: 2em;
+  background-color: rgb(193, 248, 247);
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+
+  
 }
+
+.navbar a {
+  text-decoration: none;
+  margin: 10px;
+  color: rgb(7,7,7);
+}
+
+h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 4rem;
+}
+ h3 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+ }
