@@ -1,8 +1,13 @@
 import React from 'react'
 
-const ListingItem = () => {
+const ListingItem = (props) => {
   return (
-    <div>ListingItem</div>
+    <div>
+      <p>City: {props.listing.city}</p>
+      <p>Neighborhood: {props.listing.neighborhood}</p>
+      <p>Bedrooms: {props.listing.bedrooms}</p>
+      <img src={props.listing.image}/>
+    </div>
   )
 }
 
