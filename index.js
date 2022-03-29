@@ -21,6 +21,7 @@ const listingsController = require('./controllers/ListingsController')
 
 app.get('/listings', listingsController.getListings)
 app.get('.listings/:id', listingsController.getListingById)
+app.post('./listings', listingsController.postListing)
 app.put('.listings/:id', listingsController.updateListing)
 app.delete('./listings/id', listingsController.deleteListing)
 
@@ -28,7 +29,7 @@ app.delete('./listings/id', listingsController.deleteListing)
 const reviewsController = require('./controllers/ReviewsController')
 
 app.get('/reviews', reviewsController.getReviews)
-
+app.post('/reviews/:id/:num', reviewsController.postReview)
 
 
 app.listen(PORT, () => {

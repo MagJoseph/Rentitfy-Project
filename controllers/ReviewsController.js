@@ -9,10 +9,22 @@ const getReviews = async (req, res) => {
     }
  }
 
- 
+ const postReview = async (req, res) => {
+    try {
+        let newReview = req.params.num
+        const review = await Review.findOneAndUpdate({ reviews: newReview }, { new: true })
+        await review.save()
+        return res.status(201).json({ review })
+    } catch (error) {
+        return res.status(500).json({ error: error.message })
+    }
+}
+
+
 
 module.exports = {
-    getReviews
+    getReviews,
+    postReview
 }
 
 
