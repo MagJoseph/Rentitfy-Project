@@ -1,17 +1,57 @@
 import React from 'react'
+import { useState } from 'react'
+import axios from 'axios'
+
 
 const PostListings = () => {
+
+  const [ newList, setNewListing ] = useState({
+      id: '',
+      city: '',
+      neighborhood: '',
+      bedrooms: '',
+      price: '',
+      img: '',
+      reviews: []
+   })
+
+  
+   const getNewListing = async () => {
+    const newList = await axios({
+      url: 'http://localhost:3001/listings',
+      method: 'post',
+      headers: {
+        'content-type': 'multipart/form-data'
+      },
+      data: newList
+    })
+   }
+   
+  
+
+   const handleChange = (e) => {
+    setNewListing({...getNewListing, [e.target.name]: e.target.value })
+    console.log(e.target.name)
+    console.log(e.target.value)
+  }
+  
+  const handleSubmit= () => {
+         getNewListing()
+  }
+  
+  
+
   return (
     <div>
          <h2>Add A New Listing</h2>
-    {/* <form > 
-      <input type="text" value={newListing.neighborhood} onChange={ props.handleChange} name={'neighborhood'} placeholder={'neighborhood'} />
-      <input type="text" value={newListing.img} onChange={ props.handleChange} name={'img'} placeholder={'image'} />
-      <input type="text" value={newListing.price} onChange={ props.handleChange} name={'price'} placeholder={'price'} />
-      <input type="text-area" value={newBoat.description} onChange={ props.handleChange} name={'description'} placeholder={'description'} />
-      <input type="text" value={newListing.Bedrooms} onChange={ props.handleChange} name={'bedrooms'} placeholder={'bedrooms'} />
+    <form  onSubmit={handleSubmit}> 
+      <input type="text" value={newList.city} onChange={handleChange} name={'city'} placeholder={'city'} />
+      <input type="text" value={newList.neighborhood} onChange={handleChange} name={'neighborhood'} placeholder={'neighborhood'} />
+      <input type="text" value={newList.img} onChange={ handleChange} name={'img'} placeholder={'image'} />
+      <input type="text" value={newList.price} onChange={ handleChange} name={'price'} placeholder={'price'} />
+      <input type="text" value={newList.bedrooms} onChange={ handleChange} name={'bedrooms'} placeholder={'bedrooms'} />
       <button>Submit</button>
-    </form> */}
+    </form>
     </div>
   )
 }
