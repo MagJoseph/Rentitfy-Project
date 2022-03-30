@@ -2,7 +2,7 @@ import React from 'react'
 import './App.css';
 import { Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
 import Nav from './components/Nav'
 import Home from './components/Home';
@@ -67,7 +67,9 @@ const handleChange = (e) => {
         <h2>Listings</h2>
         <div>
         {listings.map((listing) => (
-          <div className="container" onClick={() => showListing(listing)} key={listing._id}>
+          
+          <div className="container" key={listing._id}>
+          <Link to={`/listings/${listing._id}`}>
           <ListingItem 
            key={listing._id}
            city={listing.city}
@@ -77,7 +79,9 @@ const handleChange = (e) => {
            image={listing.img}
           listings={listings}
        />
+       </Link>
        </div>
+     
         ))}
       </div>
     </div>

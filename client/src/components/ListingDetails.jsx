@@ -2,6 +2,7 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 
 
@@ -9,12 +10,15 @@ const ListingDetails = (props) => {
   const [selectedListing, setSelectedListing ] = useState('')
 
   let { id } = useParams()
-
+    const getListing = async () => {
+        let res = await axios.get(`http://localhost:3001/listings/${id}`)
+        console.log(res.data.listing)
+        setSelectedListing(res.data.listing)
+    }
   useEffect(() => {
-      let currentListing = props.listings.find((listing) => listing._id === parseInt(id))
-       setSelectedListing(currentListing)
+    getListing()
       
-    }, [props.listing.id])
+    }, [])
 
   return  selectedListing ?(
     <div>
