@@ -16,7 +16,7 @@ const ListingDetails = (props) => {
       
     }, [props.listing.id])
 
-  return  (
+  return  selectedListing ?(
     <div>
     <div>
        <p>City: {selectedListing.city}</p>
@@ -24,11 +24,11 @@ const ListingDetails = (props) => {
       <p>Bedrooms: {selectedListing.bedrooms}</p>
       <p>Monthly Rent ${selectedListing.price}</p>
       <br></br>
-      <img src={props.image}/>
+      <img src={selectedListing.image}/>
       </div>
       <Link to="/reviews">Click here for comments and reviews</Link>
       </div>
-  ) 
+  ) : null;
   
 }
 
