@@ -28,7 +28,7 @@ const ListingDetails = (props) => {
       <p>Bedrooms: {selectedListing.bedrooms}</p>
       <p>Monthly Rent ${selectedListing.price}</p>
       <br></br>
-      <img src={selectedListing.image}/>
+      <img src={selectedListing.img}/>
       </div>
       <Link to="/reviews">Click here for comments and reviews</Link>
       </div>

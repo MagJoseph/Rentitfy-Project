@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReviewItem from './ReviewItem'
-import { useNavigate } from 'react-router-dom'
+
 
 const Reviews = () => {
 
@@ -34,8 +34,7 @@ useEffect(() => {
   })
  }
 
-
- const handleChange = (e) => {
+  const handleChange = (e) => {
     setNewReview({...newReview, [e.target.name]: e.target.value })
     console.log(e.target.name)
     console.log(e.target.value)
@@ -45,14 +44,15 @@ useEffect(() => {
   const handleSubmit= () => {
        getNewReview()
   }
-
-
+ 
   return (
     <div>
         <h2>Reviews and Comments</h2>
         <form className="submit-form" onSubmit={handleSubmit}> 
-      <input type="text" value={newReview.rating} onChange={handleChange} name={'rating'} placeholder={'rating'} />
-      <input type="text" value={newReview.comments} onChange={handleChange} name={'comments'} placeholder={'neighborhood'} />
+      <input type="text" value={newReview.rating} onChange={handleChange} 
+             name={'rating'} placeholder={'Rate 1-5'} />
+      <input type="text" value={newReview.comments} onChange={handleChange} 
+             name={'comments'} placeholder={'Leave a comment'} />
       <button>Submit</button>
     </form>
         <div>
