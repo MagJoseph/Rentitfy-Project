@@ -108,3 +108,10 @@ h2 {
     margin: 10px;
     border: 2px solid rgb(243, 245, 242);
   }
+
+  .list-details {
+    padding: 5px;
+    margin: 15px 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+  }

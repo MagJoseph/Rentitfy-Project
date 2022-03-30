@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import ReviewItem from './ReviewItem'
+import { useParams } from 'react-router-dom'
 
 
 const Reviews = () => {
@@ -11,6 +12,7 @@ const Reviews = () => {
      rating: '',
      comments: ''
  })
+ let { id } = useParams()
 
  const getReviews = async () =>{
     const rev = await axios.get('http://localhost:3001/reviews')
@@ -25,7 +27,7 @@ useEffect(() => {
  const getNewReview = async () => {
     console.log(newReview)
      await axios({
-    url: 'http://localhost:3001/listings/:id',
+    url: `http://localhost:3001/reviews/${id}`,
     method: 'post',
     // headers: {
     //   'content-type': 'multipart/form-data'
@@ -41,7 +43,8 @@ useEffect(() => {
   
   }
   
-  const handleSubmit= () => {
+  const handleSubmit= (e) => {
+     e.preventDefault()
        getNewReview()
   }
  
@@ -53,7 +56,7 @@ useEffect(() => {
              name={'rating'} placeholder={'Rate 1-5'} />
       <input type="text" value={newReview.comments} onChange={handleChange} 
              name={'comments'} placeholder={'Leave a comment'} />
-      <button>Submit</button>
+            <button>Submit</button>
     </form>
         <div>
             {reviews.map((review) => (

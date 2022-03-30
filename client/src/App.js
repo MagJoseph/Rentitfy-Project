@@ -24,9 +24,9 @@ function App() {
         <Route path="/" element={ <Home /> } />
         <Route path="/listings" element={ <Listings /> } />
         <Route path="/postlistings" element={ <PostListings /> } />
-       <Route path="/reviews" element={ <Reviews /> } />
-       <Route path="/listings/:id" element={ <ListingDetails /> } />
-      <Route path="/search" element={ <Search /> } />
+        <Route path="/listings/:id/reviews" element={ <Reviews /> } />
+        <Route path="/listings/:id" element={ <ListingDetails /> } />
+        <Route path="/search" element={ <Search /> } />
        </Routes>
        </main>
     

@@ -22,15 +22,16 @@ const ListingDetails = (props) => {
 
   return  selectedListing ?(
     <div>
-    <div>
+    <div className="list-details">
        <p>City: {selectedListing.city}</p>
       <p>Neighborhood: {selectedListing.neighborhood}</p>
       <p>Bedrooms: {selectedListing.bedrooms}</p>
-      <p>Monthly Rent ${selectedListing.price}</p>
+      <p>Monthly Rent: ${selectedListing.price}</p>
       <br></br>
       <img src={selectedListing.img}/>
+      <p> Reviews: {selectedListing.listing_id}</p>
       </div>
-      <Link to="/reviews">Click here for comments and reviews</Link>
+      <Link to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review</Link>
       </div>
   ) : null;
   
