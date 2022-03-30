@@ -2,7 +2,7 @@ import React from 'react'
 
 const ReviewItem = (props) => {
   return (
-    <div>
+    <div className="rev-item">
     <p>Rating: {props.rating}</p>
     <p>Comments: {props.comments}</p>
     

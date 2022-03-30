@@ -8,7 +8,6 @@ const ListingItem = (props) => {
       <p>Neighborhood: {props.neighborhood}</p>
       <p>Bedrooms: {props.bedrooms}</p>
       <p>Monthly Rent ${props.price}</p>
-      <Link to="/reviews">Click here for comments and reviews</Link>
       <br></br>
       <br></br>
       <img src={props.image}/>
