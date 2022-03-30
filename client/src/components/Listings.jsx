@@ -67,7 +67,7 @@ return (
              searchQuery={searchQuery} getSearchResult={getSearchResult} /> } />
       </Routes>
       </div>
-      <Link to='/'>Home</Link>
+      <Link className="home" to='/'>Home</Link>
     </div>
   )
 }
