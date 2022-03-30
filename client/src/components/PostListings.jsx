@@ -6,23 +6,23 @@ import axios from 'axios'
 const PostListings = () => {
 
   const [ newList, setNewListing ] = useState({
-      id: '',
       city: '',
       neighborhood: '',
       bedrooms: '',
       price: '',
       img: '',
-      reviews: []
+      reviews_id: []
    })
 
   
    const getNewListing = async () => {
-    const newList = await axios({
+      console.log(newList)
+       await axios({
       url: 'http://localhost:3001/listings',
       method: 'post',
-      headers: {
-        'content-type': 'multipart/form-data'
-      },
+      // headers: {
+      //   'content-type': 'multipart/form-data'
+      // },
       data: newList
     })
    }
@@ -30,13 +30,14 @@ const PostListings = () => {
   
 
    const handleChange = (e) => {
-    setNewListing({...getNewListing, [e.target.name]: e.target.value })
+    setNewListing({...newList, [e.target.name]: e.target.value })
     console.log(e.target.name)
     console.log(e.target.value)
+    console.log(newList)
   }
   
   const handleSubmit= () => {
-         getNewListing()
+       getNewListing()
   }
   
   
