@@ -40,3 +40,23 @@ h2 {
   font-weight: bold;
   font-size: 1.5rem;
  }
+
+ .submit-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+ }
+
+ input {
+   padding: 10px;
+   margin: 15px;
+   width: 350px;
+ }
+
+ button {
+   background-color: rgb(193, 240, 152);
+   padding: 10px;
+   border: 2px solid rgb(193, 248, 247);
+   width: 100px;
+ }

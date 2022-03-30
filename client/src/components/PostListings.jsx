@@ -44,7 +44,7 @@ const PostListings = () => {
   return (
     <div>
          <h2>Add A New Listing</h2>
-    <form  onSubmit={handleSubmit}> 
+    <form className="submit-form" onSubmit={handleSubmit}> 
       <input type="text" value={newList.city} onChange={handleChange} name={'city'} placeholder={'city'} />
       <input type="text" value={newList.neighborhood} onChange={handleChange} name={'neighborhood'} placeholder={'neighborhood'} />
       <input type="text" value={newList.img} onChange={ handleChange} name={'img'} placeholder={'image'} />
