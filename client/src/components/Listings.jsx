@@ -51,9 +51,10 @@ return (
        </div>
         ))}
       </div>
-      
-      
-      <Link className="home" to='/'>Home</Link>
+      <div>
+       <Link className="home" to='/'>Home</Link>
+       </div>
+       <br></br>
     </div>
   )
 }

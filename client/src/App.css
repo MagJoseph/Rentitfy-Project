@@ -103,9 +103,13 @@ h2 {
   }
 
   .home {
-    padding: 15px;
-    margin: 20px;
-    font-size: 1.5rem;
+    padding: 5px;
+    margin: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: rgb(7,7,7);
+    border: 2px solid rgba(235, 250, 222, 0.5);
+
   }
 
   .home-container {
