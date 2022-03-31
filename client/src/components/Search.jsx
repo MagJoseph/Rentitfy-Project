@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState} from 'react'
 import SearchItem from './SearchItem'
@@ -25,7 +24,7 @@ const Search = () => {
   return (
     <div>
         <h2>Search</h2>
-        <h3>Type in Neighborhood you're interested in</h3>
+        <h3>Type in Neighborhood you're interested in:</h3>
         <form onSubmit={getSearchResult}>
        <input
         type="text"
@@ -36,7 +35,7 @@ const Search = () => {
         ></input>
         <button type="submit">Search</button>
     </form>
-    <div>Results:
+    <div>
       {searchResults.map((result) => (
         <SearchItem
             key={result._id}
@@ -49,7 +48,7 @@ const Search = () => {
       ))}
     
     </div>
-        <Link to='/'>Home</Link>
+        
     </div>
   )
 }
