@@ -12,8 +12,7 @@ import Search from './Search'
 
 const Listings = () => {
    const [ listings, setListings ] = useState([])
-   const [ searchResults, setSearchResults ] = useState([])
-   const [ searchQuery, setSearchQuery ] = useState('')
+ 
 
 
    let navigate = useNavigate()
@@ -31,16 +30,7 @@ useEffect(() => {
    getListings()
 }, [])
 
-const getSearchResult = async (e) => {
-  e.preventDefault()
-  let res = await axios.get(`'http://localhost:3001/listings?&search=${searchQuery}`)
-  console.log(res.data.results)
-  setSearchResults(res.data.results)
-}
 
-const handleChange = (e) => {
-  setSearchQuery(e.target.value)
-}
 
 return (
     <div>

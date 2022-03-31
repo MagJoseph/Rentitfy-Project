@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Delete from './Delete'
+import Update from './Update'
 
 
 
@@ -32,7 +33,8 @@ const ListingDetails = (props) => {
       <img src={selectedListing.img}/>
      </div>
       <Link className="add-rev" to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review</Link>
-      <Delete />     
+      <Delete />   
+      <Update reviews={selectedListing.reviews_id}/>  
       </div>
   ) : null;
   

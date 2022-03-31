@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 
 
 const Reviews = () => {
-
+ //updated to true track it in useEffect
  const [reviews, setReviews] = useState([])   
  const [newReview, setNewReview ] = useState({
      rating: '',
