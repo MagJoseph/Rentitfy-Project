@@ -28,7 +28,10 @@ body {
 
 h1 {
   font-family: 'Bebas Neue', cursive;
-  font-size: 4rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+  letter-spacing: .2em;  
+ 
 }
 
 h2 {
@@ -94,22 +97,38 @@ h2 {
     font-size: 1.5rem;
   }
 
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   .home-p {
+    position: absolute;
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
     margin-top: 5rem;
     font-weight: bold;
+    bottom: 5rem;
   }
 
   .list-link {
     font-family: 'Bebas Neue', cursive;
-    font-size: 5rem;
+    font-size: 7rem;
     text-decoration: none;
     color: rgb(228, 190, 39);
     padding: 10px;
     margin: 10px;
     border: 2px solid rgb(243, 245, 242);
+    animation: changeplay 1s infinite;
   }
+
+  @keyframes changeplay {
+    70% {
+       font-size: 6.5rem;
+    }
+ }
 
   .list-details {
     padding: 5px;
@@ -144,4 +163,6 @@ h2 {
     justify-content: center;
     align-items: center;
     margin-bottom: 2rem;
+    
   }
+
