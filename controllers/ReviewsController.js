@@ -28,6 +28,7 @@ const getReviews = async (req, res) => {
 const postReview = async (req, res) => {
     try {
         const newReview = await new Review(req.body)
+        newReview.save()
         let currentListing = await Listing.findById(req.params.id)
         let oldReviews = currentListing.reviews_id
         let newReviewId = newReview._id

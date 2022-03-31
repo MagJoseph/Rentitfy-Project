@@ -11,7 +11,9 @@ const getListings = async (req, res) => {
 
 const postListing = async (req, res) => {
     try {
+        console.log('data:', req.body)
         const listing = await new Listing(req.body)
+        console.log('new:', listing)
         await listing.save()
         return res.status(201).json({ listing })
     } catch (error) {
@@ -23,6 +25,19 @@ const getListingById = async (req, res) => {
     try {
         const listId = req.params.id
         const listing = await Listing.findById(listId)
+        if (listing) {
+            return res.status(200).json({ listing })
+        } return res.status(404).send('Listing not found')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
+
+const findListing = async (req, res) => {
+    try {
+        let searchQuery = req.params
+        const listing = await Listing.find( { neighborhood: searchQuery})
         if (listing) {
             return res.status(200).json({ listing })
         } return res.status(404).send('Listing not found')
@@ -62,6 +77,7 @@ module.exports = {
     postListing,
     getListingById,
     updateListing,
-    deleteListing
+    deleteListing,
+    findListing
 
 }
