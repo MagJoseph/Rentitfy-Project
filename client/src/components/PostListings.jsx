@@ -27,7 +27,7 @@ const PostListings = () => {
       data: newList
     })
    }
-   
+    
   
 
    const handleChange = (e) => {

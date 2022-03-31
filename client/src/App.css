@@ -28,7 +28,7 @@ body {
 
 h1 {
   font-family: 'Bebas Neue', cursive;
-  font-size: 5rem;
+  font-size: 5.5rem;
   text-transform: uppercase;
   letter-spacing: .2em;  
  
@@ -37,7 +37,16 @@ h1 {
 h2 {
   font-family: 'Bebas Neue', cursive;
   font-size: 4rem;
+  animation: change_text 2s infinite;
 }
+
+@keyframes change_text {
+    50% {
+       color: rgb(228, 190, 39);
+    }
+ }
+
+
  h3 {
   font-family: 'Quicksand', sans-serif;
   font-weight: bold;
@@ -66,10 +75,12 @@ h2 {
 
  .rev-item {
    background-color: rgb(193, 248, 247);
+   margin: 15px 55px;
    padding: 5px;
-   margin: 15px 5px;
    font-family: 'Quicksand', sans-serif;
    font-weight: bold;
+
+   
    
  }
 
@@ -121,10 +132,10 @@ h2 {
     padding: 10px;
     margin: 10px;
     border: 2px solid rgb(243, 245, 242);
-    animation: changeplay 1s infinite;
+    animation: changetext 1s infinite;
   }
 
-  @keyframes changeplay {
+  @keyframes changetext {
     70% {
        font-size: 6.5rem;
     }
@@ -165,4 +176,6 @@ h2 {
     margin-bottom: 2rem;
     
   }
+
+  
 
