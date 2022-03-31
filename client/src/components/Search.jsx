@@ -12,14 +12,15 @@ const Search = () => {
    
   const getSearchResult = async (e) => {
     e.preventDefault()
-    let res = await axios.get(`http://localhost:3001/listings/${searchQuery}`)
-    console.log(res.data.results)
-    setSearchResults(res.data.results)
+    let res = await axios.get(`http://localhost:3001/search/${searchQuery}`)
+    console.log(res.data.findList)
+    setSearchResults(res.data.findList)
   }
   
   const handleChange = (e) => {
     setSearchQuery(e.target.value)
   }
+  
 
   return (
     <div>

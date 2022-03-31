@@ -22,7 +22,7 @@ const listingsController = require('./controllers/ListingsController')
 
 app.get('/listings', listingsController.getListings)
 app.get('/listings/:id', listingsController.getListingById)
-app.get('listings/:searchQuery', listingsController.findListing)
+app.get('/search/:searchQuery', listingsController.findListing)
 app.post('/listings', listingsController.postListing)
 app.put('/listings/:id', listingsController.updateListing)
 app.delete('/listings/:id', listingsController.deleteListing)

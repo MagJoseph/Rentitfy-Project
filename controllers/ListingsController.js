@@ -36,10 +36,12 @@ const getListingById = async (req, res) => {
 
 const findListing = async (req, res) => {
     try {
-        let searchQuery = req.params
-        const listing = await Listing.find( { neighborhood: searchQuery})
-        if (listing) {
-            return res.status(200).json({ listing })
+        let searchQuery = req.params.searchQuery
+        console.log(searchQuery)
+        const findList = await Listing.find({neighborhood: searchQuery})
+        console.log(findList)
+        if (findList) {
+            return res.status(200).json({ findList })
         } return res.status(404).send('Listing not found')
     } catch (error) {
         return res.status(500).send(error.message)
