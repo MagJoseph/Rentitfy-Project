@@ -1,13 +1,17 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-let { id } = useParams()
+import axios from 'axios'
+
 
 
 const Delete = () => {
-   
+  
+
+  let { id } = useParams()
+
     async function deletePost() {
         await axios.delete(`http://localhost:3001/listings/${id}`);
-        setStatus('Delete successful');
+       
     }
 
    const handleDelete = () => {
@@ -16,7 +20,7 @@ const Delete = () => {
 
   return (
     <div>
-    <button onClick={handleDelete}>Delete Listing</button>
+    <button className="del-btn" onClick={handleDelete}>Delete Listing</button>
     </div>
   )
 }

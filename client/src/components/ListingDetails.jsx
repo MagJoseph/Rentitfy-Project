@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
+import Delete from './Delete'
 
 
 
@@ -29,9 +30,9 @@ const ListingDetails = (props) => {
       <p>Monthly Rent: ${selectedListing.price}</p>
       <br></br>
       <img src={selectedListing.img}/>
-      <p> Reviews: {selectedListing.listing_id}</p>
-      </div>
-      <Link to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review</Link>
+     </div>
+      <Link className="add-rev" to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review</Link>
+      <Delete />     
       </div>
   ) : null;
   

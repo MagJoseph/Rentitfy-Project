@@ -115,3 +115,18 @@ h2 {
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
   }
+
+  .del-btn {
+    background-color: rgb(193, 240, 152);
+    padding: 10px;
+    border: 2px solid rgb(193, 248, 247);
+    width: 130px;
+    margin: 20px 5px; 
+  }
+
+  .add-rev {
+    padding: 5px;
+    margin: 25px 5px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+  }
