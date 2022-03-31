@@ -192,5 +192,12 @@ h2 {
     
   }
 
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
   
 
