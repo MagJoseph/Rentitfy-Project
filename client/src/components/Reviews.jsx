@@ -50,6 +50,8 @@ useEffect(() => {
      e.preventDefault()
        getNewReview()
   }
+
+  
  
   return (
     <div>
@@ -71,7 +73,7 @@ useEffect(() => {
              />
             ))}
         </div>
-   
+       
     </div>
   )
 }

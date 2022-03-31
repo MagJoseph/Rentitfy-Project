@@ -32,8 +32,11 @@ const ListingDetails = (props) => {
       <br></br>
       <img src={selectedListing.img}/>
      </div>
-      <Link className="add-rev" to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review</Link>
+      <Link className="add-rev" to={`/listings/${selectedListing._id}/reviews`}>Add a comment and a review here</Link>
+      <br></br>
+      <div>  
       <Delete />   
+      </div>
       <Update reviews={selectedListing.reviews_id}/>  
       </div>
   ) : null;

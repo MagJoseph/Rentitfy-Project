@@ -103,7 +103,7 @@ h2 {
 
   .list-link {
     font-family: 'Bebas Neue', cursive;
-    font-size: 6rem;
+    font-size: 5rem;
     text-decoration: none;
     color: rgb(228, 190, 39);
     padding: 10px;
@@ -113,22 +113,35 @@ h2 {
 
   .list-details {
     padding: 5px;
-    margin: 15px 5px;
+    margin: 25px 5px;
     font-family: 'Quicksand', sans-serif;
     font-weight: bold;
+    font-size: 1rem;
   }
 
   .del-btn {
+    margin: 35px 5px;
     background-color: rgb(193, 240, 152);
     padding: 10px;
     border: 2px solid rgb(193, 248, 247);
     width: 130px;
-    margin: 20px 5px; 
-  }
+   }
 
   .add-rev {
-    padding: 5px;
-    margin: 25px 5px;
+    padding: 10px;
     font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
     font-weight: bold;
+    text-decoration: none;
+    background-color: rgb(193, 248, 247);
+    color: rgb(7,7,7);
+    border: 2px solid rgba(235, 250, 222, 0.5);
+  }
+
+  .update-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
   }

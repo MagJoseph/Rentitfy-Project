@@ -46,10 +46,24 @@ const postReview = async (req, res) => {
     }
 }
 
+const deleteReview = async (req, res) => {
+    try {
+        const { id } = req.params
+        const deleted = await Review.findByIdAndDelete(id)
+        if (deleted) {
+            return res.status(200).send('Listing deleted')
+        }
+        throw new Error('Listing not found')
+    } catch (error) {
+        return res.status(500).send(error.message)
+    }
+}
+
 module.exports = {
     getReviews,
     updateReview,
-    postReview
+    postReview,
+    deleteReview
 }
 
 
