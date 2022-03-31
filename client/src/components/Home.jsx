@@ -9,7 +9,7 @@ const Home = () => {
         <br></br>
         <Link className="list-link" to='/listings'> Browse Listings</Link>
         <br></br>
-        <p className="home-p">See something you like? Contact our agent now!</p>
+        <Link className="home-p" to="/contact">See something you like? Contact our agent now!</Link>
     </div>
   )
 }
