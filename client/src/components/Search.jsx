@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 import { useState} from 'react'
+import SearchItem from './SearchItem'
 
 
 const Search = () => {
@@ -11,7 +12,7 @@ const Search = () => {
    
   const getSearchResult = async (e) => {
     e.preventDefault()
-    let res = await axios.get(`http://localhost:3001/listings?&search=${searchQuery}`)
+    let res = await axios.get(`http://localhost:3001/listings/${searchQuery}`)
     console.log(res.data.results)
     setSearchResults(res.data.results)
   }
@@ -34,6 +35,19 @@ const Search = () => {
         ></input>
         <button type="submit">Search</button>
     </form>
+    <div>Results:
+      {searchResults.map((result) => (
+        <SearchItem
+            key={result._id}
+            city={result.city}
+           neighborhood={result.neighborhood}
+           bedrooms={result.bedrooms}
+           price={result.price}
+           image={result.img}
+         />
+      ))}
+    
+    </div>
         <Link to='/'>Home</Link>
     </div>
   )

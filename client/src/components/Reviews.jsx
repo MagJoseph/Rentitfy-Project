@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 
 const Reviews = () => {
  //updated to true track it in useEffect
+ const [value, setValue] = useState(false)
  const [reviews, setReviews] = useState([])   
  const [newReview, setNewReview ] = useState({
      rating: '',
@@ -18,11 +19,13 @@ const Reviews = () => {
     const rev = await axios.get('http://localhost:3001/reviews')
     console.log(rev.data.reviews)
     setReviews(rev.data.reviews)
+    setValue(true)
+    
 } 
 
 useEffect(() => {
  getReviews()
-}, [])
+}, [value])
 
  const getNewReview = async () => {
     console.log(newReview)
