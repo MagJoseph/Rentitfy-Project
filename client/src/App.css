@@ -73,16 +73,19 @@ h2 {
    width: 100px;
  }
 
+ p {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+  font-size: 1.3rem;
+ }
+
  .rev-item {
    background-color: rgb(193, 248, 247);
    margin: 15px 55px;
    padding: 5px;
    font-family: 'Quicksand', sans-serif;
    font-weight: bold;
-
-   
-   
- }
+}
 
  img { 
    width: 500px;
@@ -124,11 +127,17 @@ h2 {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.5rem;
     margin-top: 5rem;
-    font-weight: bold;
-    bottom: 5rem;
+    bottom: 4rem;
     text-decoration: none;
-    color: rgb(7,7,7)
+    color: rgb(7,7,7);
+    background-color: rgb(155, 247, 245);
+    padding: 10px;
+    border-radius: 15px;
   }
+
+ .home-p:hover {
+   box-shadow: 0px 2px 15px 5px rgb(243, 245, 242);
+ }
 
   .list-link {
     font-family: 'Bebas Neue', cursive;
