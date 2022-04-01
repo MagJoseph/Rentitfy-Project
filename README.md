@@ -29,6 +29,8 @@
 ### ***Getting Started***
 ##### Fork and clone this repository to your terminal window
 ****
+<img width="1324" alt="Screen Shot 2022-04-01 at 9 51 19 AM" src="https://user-images.githubusercontent.com/99560351/161277495-f3453b1d-8925-4f80-bca7-c79ae7f1cecd.png">
+
 ### ***Credits***
 ##### Logo image is owned by me.
 ##### Other images where found on Google Search.
