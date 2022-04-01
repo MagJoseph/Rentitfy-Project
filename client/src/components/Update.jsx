@@ -25,23 +25,20 @@ const getListToUpdate = async () => {
     });
 }
 
-
-
 const handleSubmit= (e) => {
      e.preventDefault()
      getListToUpdate()
 }
 
-
   return (
     <div> Update Listing:
-   <form className="update-form" onSubmit={handleSubmit}>
-    <input type="text" city="city" onChange={(e)=>{setCity(e.target.value)}} placeholder="city"/>
-    <input type="text" neighborhood="neighborhood" onChange={(e)=>{setNeighborhood(e.target.value)}} placeholder="neighborhood"/>
-    <input type="text" bedrooms="bedrooms" onChange={(e)=>{setBedrooms(e.target.value)}}  placeholder="bedrooms"/>
-    <input type="text" price="price" onChange={(e)=>{setPrice(e.target.value)}}  placeholder="price"/>
-    <input type="text" img="img" onChange={(e)=>{setImgUrl(e.target.value)}}  placeholder="imgUrl"/>
-    <button>Submit</button>
+       <form className="update-form" onSubmit={handleSubmit}>
+        <input type="text" city="city" onChange={(e)=>{setCity(e.target.value)}} placeholder="city"/>
+        <input type="text" neighborhood="neighborhood" onChange={(e)=>{setNeighborhood(e.target.value)}} placeholder="neighborhood"/>
+        <input type="text" bedrooms="bedrooms" onChange={(e)=>{setBedrooms(e.target.value)}}  placeholder="bedrooms"/>
+        <input type="text" price="price" onChange={(e)=>{setPrice(e.target.value)}}  placeholder="price"/>
+        <input type="text" img="img" onChange={(e)=>{setImgUrl(e.target.value)}}  placeholder="imgUrl"/>
+      <button>Submit</button>
     </form>
     
     </div>

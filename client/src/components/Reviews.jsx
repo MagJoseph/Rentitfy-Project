@@ -49,19 +49,17 @@ useEffect(() => {
        getNewReview()
   }
 
-  
- 
-  return (
+ return (
     <div>
         <h2>Reviews and Comments</h2>
         <form className="submit-form" onSubmit={handleSubmit}> 
-      <input type="text" value={newReview.rating} onChange={handleChange} 
-             name={'rating'} placeholder={'Rate 1-5'} />
-      <input type="text" value={newReview.comments} onChange={handleChange} 
-             name={'comments'} placeholder={'Leave a comment'} />
+             <input type="text" value={newReview.rating} onChange={handleChange} 
+                     name={'rating'} placeholder={'Rate 1-5'} />
+             <input type="text" value={newReview.comments} onChange={handleChange} 
+                     name={'comments'} placeholder={'Leave a comment'} />
             <button>Submit</button>
-    </form>
-        <div>
+        </form>
+      <div>
             {reviews.map((review) => (
             <ReviewItem
                key={review._id}
@@ -70,9 +68,8 @@ useEffect(() => {
                reviews={reviews}
              />
             ))}
-        </div>
-       
-    </div>
+       </div>
+     </div>
   )
 }
 
