@@ -1,5 +1,8 @@
 import React from 'react'
 
+
+//this here will be a future update where user can submit their info 
+//and a message for the agent
 const Contact = () => {
   return (
     <div>
