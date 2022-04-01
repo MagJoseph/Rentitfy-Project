@@ -30,7 +30,7 @@ const handleSubmit= (e) => {
      e.preventDefault()
      getListToUpdate()
      navigate('/listings')
-     window.location.reload(false);
+     window.location.reload(false)
 }
 
   return (

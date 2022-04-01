@@ -1,8 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 const PostListings = () => {
+
+  let navigate = useNavigate()
 
   const [ newList, setNewListing ] = useState({
       city: '',
@@ -18,9 +21,6 @@ const PostListings = () => {
        await axios({
       url: 'http://localhost:3001/listings',
       method: 'post',
-      // headers: {
-      //   'content-type': 'multipart/form-data'
-      // },
       data: newList
     })
    }
@@ -34,6 +34,8 @@ const PostListings = () => {
   
   const handleSubmit= () => {
        getNewListing()
+       navigate('/listings')
+       window.location.reload(false)
   }
   
 return (
