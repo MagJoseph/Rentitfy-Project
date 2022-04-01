@@ -1,10 +1,11 @@
 import React from 'react'
 import axios from 'axios'
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, useNavigate } from 'react-router-dom'
 
 const Update = (props) => {
     let { id } = useParams()
+    let navigate = useNavigate()
 
  const [ city, setCity ] = useState('')   
  const [ neighborhood, setNeighborhood ] = useState('')
@@ -28,6 +29,8 @@ const getListToUpdate = async () => {
 const handleSubmit= (e) => {
      e.preventDefault()
      getListToUpdate()
+     navigate('/listings')
+     window.location.reload(false);
 }
 
   return (
