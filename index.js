@@ -33,7 +33,7 @@ const reviewsController = require('./controllers/ReviewsController')
 app.get('/reviews', reviewsController.getReviews)
 app.put('/reviews/:id', reviewsController.updateReview)
 app.post('/reviews/:id', reviewsController.postReview)
-app.delete('/listings/:id/reviews', reviewsController.deleteReview)
+app.delete('/reviews/:id', reviewsController.deleteReview)
 
 
 app.get('/*', (req, res) => {
