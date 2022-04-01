@@ -10,7 +10,8 @@ const Contact = () => {
            <input type="text" placeholder={"Last Name"} />
            <input type="text" placeholder={"Phone Number"} />
            <input type="text" placeholder={"Email Address"} />
-           <button>Submit</button>
+           <input className="m-input" type="text" placeholder={"Message"} />
+           <button className="contact-btn">Submit</button>
            </form>
     </div>
   )

@@ -3,16 +3,13 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios'
 
 
-
 const Delete = () => {
   
-
   let { id } = useParams()
 
-    async function deletePost() {
+  const deletePost = async () => {
         await axios.delete(`http://localhost:3001/listings/${id}`);
-       
-    }
+  }
 
    const handleDelete = () => {
       deletePost()
@@ -26,3 +23,4 @@ const Delete = () => {
 }
 
 export default Delete
+
