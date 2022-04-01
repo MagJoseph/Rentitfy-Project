@@ -27,10 +27,10 @@
 ##### [ ] - Update contact section and allow users submit their contact infor for the agent.
 ***
 ### ***Getting Started***
-##### Fork and clone 
+##### Fork and clone this repository to your terminal window
 ****
 ### ***Credits***
 ##### Logo image is owned by me.
-##### Other images where found in Google Search.
+##### Other images where found on Google Search.
 ***
 
